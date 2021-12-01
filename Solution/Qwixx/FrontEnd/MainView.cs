@@ -10,10 +10,8 @@ namespace Qwixx.FrontEnd
     public partial class MainView : Form, IMainView
     {
         private List<CheckBox> _checkBoxes;
-<<<<<<< HEAD
+
         private List<TextBox> _textBoxes;
-=======
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
 
         public event EventHandler<CheckBox> RedFieldIsSet;
 
@@ -87,7 +85,6 @@ namespace Qwixx.FrontEnd
             }
         }
 
-<<<<<<< HEAD
         public void SetResult(Dictionary<string, int> models)
         {
             foreach (var box in _textBoxes)
@@ -98,16 +95,6 @@ namespace Qwixx.FrontEnd
                         box.Text = model.Value.ToString();
                 }
             }
-=======
-        public void SetResult(ResultModel result)
-        {
-            redResult.Text = result.RedResult.ToString();
-            yellowResult.Text = result.YellowResult.ToString();
-            greenResult.Text = result.GreenResult.ToString();
-            blueResult.Text = result.BlueResult.ToString();
-            missResult.Text = result.MissResult.ToString();
-            endResult.Text = result.EndResult.ToString();
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
         }
 
         private void Initialize()

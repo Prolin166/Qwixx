@@ -31,7 +31,7 @@ namespace Qwixx.Services.Contracts
         [Rule]
         void RuleAddLock();
         [Rule]
-        void Rule2CompleteRows();
+        void RuleTwoCompleteRows();
         [Rule]
         void RuleMissFields();
     }

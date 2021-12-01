@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 ﻿using Qwixx.Attributes;
 using Qwixx.Enums;
-=======
-﻿using Qwixx.Enums;
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
 using Qwixx.Models.Contracts;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,11 +16,7 @@ namespace Qwixx.Models
         /// </summary>
         public RowModel(FieldCode code)
         {
-<<<<<<< HEAD
             Code = code;
-=======
-            Color = color;
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
         }
 
         public FieldCode Code { get; set; }
@@ -37,11 +29,7 @@ namespace Qwixx.Models
             }
             set
             {
-<<<<<<< HEAD
                 if (this.Count(true) >= 4 && (Code.Equals(FieldCode.gn) || Code.Equals(FieldCode.bu))) this.Lock = true;
-=======
-                if (this.Count(true) >= 4 && (Color.Equals(ColorCode.gn) || Color.Equals(ColorCode.bu))) this.Lock = true;
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
                 _two = value;
             }
         }
@@ -72,11 +60,7 @@ namespace Qwixx.Models
             }
             set
             {
-<<<<<<< HEAD
                 if (this.Count(true) >= 4 && (Code.Equals(FieldCode.rd) || Code.Equals(FieldCode.ye))) this.Lock = true;
-=======
-                if (this.Count(true) >= 4 && (Color.Equals(ColorCode.rd) || Color.Equals(ColorCode.ye))) this.Lock = true;
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
                 _twelve = value;
             }
         }
@@ -100,7 +84,6 @@ namespace Qwixx.Models
             }
             return list.Count;
         }
-<<<<<<< HEAD
 
         public int Count()
         {
@@ -132,17 +115,5 @@ namespace Qwixx.Models
             };
             return result;
         }
-=======
-        public int Count()
-        {
-            var list = new List<string>();
-            foreach (var prop in this.GetType().GetProperties())
-            {
-                if (prop.PropertyType == typeof(bool))
-                    list.Add(prop.Name);
-            }
-            return list.Count;
-        }
->>>>>>> 4140869e415681d24a866a9ab5f6ad3e85995105
     }
 }

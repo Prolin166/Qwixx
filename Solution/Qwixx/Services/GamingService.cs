@@ -85,7 +85,7 @@ namespace Qwixx.Services
         }
 
         [Rule]
-        public void Rule2CompleteRows()
+        public void RuleTwoCompleteRows()
         {
             List<bool> rowModels = new List<bool>();
             foreach (IRowModel rowModel in ModelList)
