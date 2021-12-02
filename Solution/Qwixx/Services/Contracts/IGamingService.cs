@@ -26,14 +26,5 @@ namespace Qwixx.Services.Contracts
         IEnumerable<MethodInfo> GetMissRules();
 
         Dictionary<string, int> CalculateResult();
-
-        [Rule]
-        void RuleLockLeftFields();
-        [Rule]
-        void RuleAddLock();
-        [Rule]
-        void RuleTwoCompleteRows();
-        [Rule]
-        void RuleMissFields();
     }
 }

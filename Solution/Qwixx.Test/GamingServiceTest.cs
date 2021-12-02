@@ -13,7 +13,7 @@ namespace Qwixx.Test
     [TestClass]
     public class GamingServiceTest
     {
-        IGamingService _gamingService;
+        GamingService _gamingService;
         IRowModel _redModel;
         IRowModel _yellowModel;
         IRowModel _greenModel;
@@ -107,7 +107,7 @@ namespace Qwixx.Test
 
             _gamingService.RuleAddLock();
 
-            Assert.IsTrue(_gamingService.FieldList.Contains("None00"));
+            Assert.IsTrue(_gamingService.FieldList.Contains("00"));
         }
 
         [TestMethod]

@@ -21,18 +21,7 @@ namespace Qwixx.Models
 
         public FieldCode Code { get; set; }
         [Field]
-        public bool Two
-        {
-            get
-            {
-                return _two;
-            }
-            set
-            {
-                if (this.Count(true) >= 4 && (Code.Equals(FieldCode.gn) || Code.Equals(FieldCode.bu))) this.Lock = true;
-                _two = value;
-            }
-        }
+        public bool Two { get; set; }
         [Field]
         public bool Three { get; set; }
         [Field]
@@ -52,18 +41,7 @@ namespace Qwixx.Models
         [Field]
         public bool Eleven { get; set; }
         [Field]
-        public bool Twelve
-        {
-            get
-            {
-                return _twelve;
-            }
-            set
-            {
-                if (this.Count(true) >= 4 && (Code.Equals(FieldCode.rd) || Code.Equals(FieldCode.ye))) this.Lock = true;
-                _twelve = value;
-            }
-        }
+        public bool Twelve { get; set; }
         [Field]
         public bool Lock { get; set; }
 

@@ -82,8 +82,19 @@ namespace Qwixx.Services
         [Rule]
         public void RuleAddLock()
         {
-            if (Model.Lock.Equals(true))
+            if(Model.Twelve.Equals(true)
+                && Model.Count(true) >= 4
+                && (Model.Code.Equals(FieldCode.rd) || Model.Code.Equals(FieldCode.ye)))
             {
+                Model.Lock = true;
+                FieldList.Add(Model.Code + "00");
+            }
+
+            if (Model.Twelve.Equals(true)
+                && Model.Count(true) >= 4
+                && (Model.Code.Equals(FieldCode.rd) || Model.Code.Equals(FieldCode.ye)))
+            {
+                Model.Lock = true;
                 FieldList.Add(Model.Code + "00");
             }
         }

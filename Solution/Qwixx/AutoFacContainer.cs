@@ -18,8 +18,8 @@ namespace Qwixx
         public IContainer Configure()
         {
             _builder.RegisterType<MainView>().AsImplementedInterfaces().AsSelf().SingleInstance();
-            _builder.RegisterType<GamingService>().AsImplementedInterfaces().AsSelf();
-            _builder.RegisterType<MainViewPresenter>().AsImplementedInterfaces().AsSelf();
+            _builder.RegisterType<GamingService>().AsImplementedInterfaces().AsSelf().SingleInstance();
+            _builder.RegisterType<MainViewPresenter>().AsImplementedInterfaces().AsSelf().SingleInstance();
 
             IContainer container = _builder.Build();
 
