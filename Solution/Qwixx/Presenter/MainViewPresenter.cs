@@ -1,5 +1,4 @@
 ﻿using Qwixx.FrontEnd.Contracts;
-using Qwixx.Models;
 using Qwixx.Models.Contracts;
 using Qwixx.Presenter.Contracts;
 using Qwixx.Services.Contracts;

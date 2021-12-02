@@ -1,9 +1,8 @@
-﻿ using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Windows.Forms;
- using Qwixx.FrontEnd.Contracts;
-using Qwixx.Models.Contracts;
+﻿using Qwixx.FrontEnd.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Qwixx.FrontEnd
 {

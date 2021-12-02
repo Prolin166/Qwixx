@@ -148,9 +148,10 @@ namespace Qwixx.Test
                 Checked = true,
                 Text = "new"
             });
-            Assert.AreEqual(_missModel.Count(true), 2);
+            
             _gamingService.Verify(x => x.GetMissRules(), Times.Exactly(2));
-            _mainView.Verify(x => x.UpdateFields(It.IsAny<List<string>>()), Times.Once);
+            _mainView.Verify(x => x.UpdateFields(It.IsAny<List<string>>()), Times.Exactly(2));
+            Assert.AreEqual(_missModel.Count(true), 2);
         }
     }
 }

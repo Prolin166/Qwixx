@@ -8,7 +8,8 @@ namespace Qwixx.Services.Contracts
 {
     public interface IGamingService
     {
-        List<string> FieldList { get; set; }
+        List<string> FieldList { get; }
+
 
         CheckBox ClickedField { get; set; }
         

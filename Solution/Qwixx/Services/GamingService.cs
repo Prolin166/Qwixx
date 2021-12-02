@@ -11,15 +11,19 @@ namespace Qwixx.Services
 {
     public class GamingService : IGamingService
     {
-        public List<string> FieldList { get; set; } = new List<string>();
+        public List<string> FieldList { get; } = new List<string>();
 
-        public CheckBox ClickedField { get; set; }
+        
 
         public IRowModel Model { get; set; }
         
         public IMissModel MissModel { get; set; }
-        
+
+        public CheckBox ClickedField { get; set; }
+
         public List<IRowModel> ModelList { get; set; }
+
+
 
         public IEnumerable<MethodInfo> GetRules()
         {
