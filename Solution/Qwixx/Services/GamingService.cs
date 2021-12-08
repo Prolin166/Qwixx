@@ -90,9 +90,9 @@ namespace Qwixx.Services
                 FieldList.Add(Model.Code + "00");
             }
 
-            if (Model.Twelve.Equals(true)
+            if (Model.Two.Equals(true)
                 && Model.Count(true) >= 4
-                && (Model.Code.Equals(FieldCode.rd) || Model.Code.Equals(FieldCode.ye)))
+                && (Model.Code.Equals(FieldCode.gn) || Model.Code.Equals(FieldCode.bu)))
             {
                 Model.Lock = true;
                 FieldList.Add(Model.Code + "00");

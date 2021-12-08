@@ -34,8 +34,8 @@ namespace Qwixx.Test
                 _greenModel,
                 _blueModel
             });
-            _gamingService.Model = new RowModel(FieldCode.None);
-            _gamingService.MissModel = new MissModel(FieldCode.None);
+            _gamingService.Model = new RowModel(FieldCode.rd);
+            _gamingService.MissModel = new MissModel(FieldCode.ms);
         }
 
         [TestMethod]
@@ -103,11 +103,15 @@ namespace Qwixx.Test
         [TestMethod]
         public void AddLockField_ListContain00()
         {
-            _gamingService.Model.Lock = true;
+            _gamingService.Model.Eight = true;
+            _gamingService.Model.Seven = true;
+            _gamingService.Model.Six = true;
+            _gamingService.Model.Twelve = true;
 
             _gamingService.RuleAddLock();
 
-            Assert.IsTrue(_gamingService.FieldList.Contains("00"));
+            Assert.IsTrue(_gamingService.Model.Lock);
+            Assert.IsTrue(_gamingService.FieldList.Contains("rd00"));
         }
 
         [TestMethod]
